@@ -708,6 +708,37 @@ body {
 }
 
 /* =========================================================
+   TABLET: STACK FIXED-WIDTH SIDE-BY-SIDE LAYOUTS
+   Both .showcase-project and .doc-section--media pair a
+   flexible text column with a fixed-width image/gif. Below
+   this width the fixed side no longer leaves enough room for
+   the text column and the row would overflow horizontally, so
+   the pair stacks instead.
+   ========================================================= */
+@media (max-width: 820px) {
+  .showcase-project {
+    flex-direction: column;
+  }
+
+  .showcase-project__image {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .doc-section--media {
+    flex-direction: column;
+  }
+
+  .section-gif {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 16px auto 0;
+  }
+}
+
+/* =========================================================
    BASIC VIEWPORT COMPATIBILITY
    ========================================================= */
 @media (max-width: 600px) {
@@ -739,15 +770,34 @@ body {
   .lightbox__close {
     top: 12px;
     right: 12px;
+    /* Slightly larger tap area; same colors/border as desktop. */
+    padding: 8px 14px;
   }
 
   .doc-header {
+    /* The fixed 230px gap + row-reverse layout only works with
+       room on both sides; stack instead so the name/pfp never
+       force horizontal scrolling on narrow screens. */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 16px;
+  }
+
+  .doc-header__name {
+    font-size: 24px;
   }
 
   .pfp,
   .signal-gif {
     width: 76px;
     height: 76px;
+  }
+
+  .signal-gif {
+    /* The desktop margin: -370px is a deliberate glitch offset
+       that only makes sense with desktop's spacing; it would
+       shove the gif off-screen on a narrow layout. */
+    margin: 24px auto;
   }
 }

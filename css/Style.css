@@ -1182,6 +1182,11 @@ body.reveal-active .mode-switch {
         padding: 90px 35px 60px;
     }
 
+    .pfp {
+        width: 220px;
+        height: 220px;
+    }
+
     .certificate-card {
         grid-template-columns: 280px minmax(0, 1fr);
         gap: 25px;
@@ -1307,6 +1312,18 @@ body.reveal-active .mode-switch {
 
     .mode-switch__label {
         font-size: 8px;
+    }
+
+    .mode-switch__toggle {
+        /* Purely an invisible hit-area increase for touch — the
+           button has no background/border, so this does not
+           change how the switch looks. */
+        padding: 10px;
+    }
+
+    .pfp {
+        width: 180px;
+        height: 180px;
     }
 
     .reveal__media {
