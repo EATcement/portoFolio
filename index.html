@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portfólio profissional e acadêmico de Full Name">
+    <meta name="author" content="Full Name">
+
+    <title>Portfólio | IC</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="mode-professional">
+
+    <!-- =====================================================
+         MODE SWITCH
+         ===================================================== -->
+
+    <div class="mode-switch" id="modeSwitch">
+
+        <span class="mode-switch__label mode-switch__label--left">
+            PROFISSIONAL
+        </span>
+
+        <button
+            type="button"
+            class="mode-switch__toggle"
+            id="modeToggle"
+            role="switch"
+            aria-checked="false"
+            aria-label="Alternar entre modo profissional e pessoal"
+        >
+            <span class="mode-switch__track">
+                <span class="mode-switch__knob"></span>
+            </span>
+        </button>
+
+        <span class="mode-switch__label mode-switch__label--right">
+            PESSOAL
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         PORTFOLIO FEEDBACK NOTIFICATION
+         ===================================================== -->
+
+    <aside
+        class="portfolio-notification"
+        id="portfolioNotification"
+        aria-live="polite"
+        aria-atomic="true"
+        hidden
+    >
+        <div class="portfolio-notification__content" id="portfolioNotificationContent">
+            <p class="portfolio-notification__message">
+                Você está gostando do portfólio?
+            </p>
+
+            <div class="portfolio-notification__actions">
+                <button
+                    type="button"
+                    class="portfolio-notification__button portfolio-notification__button--no"
+                    id="portfolioNotificationNo"
+                >
+                    Não, poderia ser mais criativo.
+                </button>
+
+                <button
+                    type="button"
+                    class="portfolio-notification__button portfolio-notification__button--yes"
+                    id="portfolioNotificationYes"
+                >
+                    Sim, é minimalista e profissional.
+                </button>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- =====================================================
+         PROFESSIONAL SCREEN
+         ===================================================== -->
+
+    <main class="screen screen--professional" id="professionalScreen">
+
+        <!-- =================================================
+             HERO / HEADER
+             ================================================= -->
+
+        <header class="hero">
+
+            <div class="hero__content">
+
+                <p class="hero__eyebrow">
+                    PORTFÓLIO
+                </p>
+
+                <h1 class="hero__name">
+                    Israel Cristhian de Oliveira
+                </h1>
+
+                
+                <img class="pfp" src="assets/imgs/pfp.jfif" alt="Profile picture">
+
+                <p class="hero__title">
+                    Engenharia de software.
+                </p>
+
+
+                <div class="hero__links">
+
+                    <a href="#projects" class="hero__link">
+                        Ver projetos
+                    </a>
+
+                    <a
+                        href="https://github.com/EATcement"
+                        class="hero__link hero__link--secondary"
+                        target="https://github.com/EATcement"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             ABOUT
+             ================================================= -->
+
+        <section class="portfolio-section" id="about">
+
+            <div class="section-heading">
+
+                <span class="section-heading__number">
+                    01
+                </span>
+
+                <div>
+                    <p class="section-heading__label">
+                        PERFIL
+                    </p>
+
+                    <h2>
+                        Sobre mim
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-main">
+
+                    <p>
+                        Sou uma pessoa movida pela curiosidade e pela vontade de transformar ideias em algo concreto. Gosto de explorar diferentes áreas da tecnologia e da criação, entender como as coisas funcionam e, principalmente, aprender fazendo.
+
+                        Minha trajetória ainda está em construção, mas venho desenvolvendo projetos que me permitem experimentar diferentes formas de criar e resolver problemas — desde tecnologia e desenvolvimento até projetos visuais e produção musical. Para mim, um projeto não precisa nascer perfeito: gosto do processo de testar, errar, pesquisar, melhorar e descobrir novas possibilidades ao longo do caminho.
+
+                        Quero continuar expandindo meus conhecimentos para além de uma única área, aprendendo a unir programação, design, criatividade e comunicação para construir coisas que tenham um propósito. É justamente essa possibilidade de aprender por meio de desafios reais, trocar conhecimento com outras pessoas e transformar ideias em projetos que me atrai na Apple Developer Academy.
+
+                        Vejo a Academy como uma oportunidade de sair da zona de conforto, aprender com pessoas diferentes de mim e descobrir até onde posso levar aquilo que sou capaz de criar.                   
+                    </p>
+
+                </div>
+
+                <div class="about-highlights">
+
+                    <div class="highlight">
+                        <span class="highlight__number">01</span>
+                        <span class="highlight__text">
+                            Desenvolvimento
+                        </span>
+                    </div>
+
+                    <div class="highlight">
+                        <span class="highlight__number">02</span>
+                        <span class="highlight__text">
+                            Projetos acadêmicos
+                        </span>
+                    </div>
+
+                    <div class="highlight">
+                        <span class="highlight__number">03</span>
+                        <span class="highlight__text">
+                            Aprendizado contínuo
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EXPERIENCE
+             ================================================= -->
+
+        <section class="portfolio-section" id="experience">
+
+            <div class="section-heading">
+
+                <span class="section-heading__number">
+                    02
+                </span>
+
+                <div>
+                    <p class="section-heading__label">
+                        EXPERIÊNCIA 
+                    </p>
+
+                    <h2>
+                        Experiência profissional
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="timeline">
+
+                <!-- EXPERIENCE ITEM -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-item__date">
+                        2022 — 2024
+                    </div>
+
+                    <div class="timeline-item__content">
+
+                        <h3>
+                            Assistente de escritório / Atendimento ao cliente
+                        </h3>
+
+                        <p class="timeline-item__company">
+                            URBS
+                        </p>
+
+                        <p>
+                            Na urbs fazia coisinhas
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+             ================================================= -->
+
+        <section class="portfolio-section portfolio-section--projects" id="projects">
+
+            <div class="section-heading">
+
+                <span class="section-heading__number">
+                    03
+                </span>
+
+                <div>
+                    <p class="section-heading__label">
+                        PROJETOS
+                    </p>
+
+                    <h2>
+                        Projetos selecionados
+                    </h2>
+                </div>
+
+            </div>
+
+            <p class="section-intro">
+                Projetos acadêmicos e experimentais que
+                representam minha experiência prática, minha evolução
+                técnica e minha participação em diferentes etapas
+                de desenvolvimento.
+            </p>
+
+<!-- =================================================
+     PROJECT 01
+     ================================================= -->
+
+<article class="project-card">
+
+    <div class="project-card__header">
+
+        <div>
+
+            <h3>
+                UniRide
+            </h3>
+
+            <p class="project-card__context">
+                Projeto acadêmico · 2026
+            </p>
+
+        </div>
+
+        <a
+            href="https://github.com/EATcement/Uniride"
+            class="project-card__github"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub ↗
+        </a>
+
+    </div>
+
+
+    <!-- IMAGES -->
+
+    <div class="project-card__images">
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/Uniride1.png"
+                alt="Interface do projeto UniRide"
+            >
+        </div>
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/Uniride2.jfif"
+                alt="Segunda interface do projeto UniRide"
+            >
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT INFO -->
+
+    <div class="project-card__body">
+
+        <div class="project-description">
+
+            <h4>
+                Sobre o projeto
+            </h4>
+
+            <p>
+                O UniRide é uma plataforma web de caronas desenvolvida para
+                estudantes universitários, conectando alunos que possuem vagas
+                em seus veículos a estudantes que precisam de transporte até
+                o campus. A proposta busca reduzir os custos de transporte e
+                incentivar a colaboração entre os alunos.
+            </p>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-detail">
+
+                <h4>
+                    Minha participação
+                </h4>
+
+                <p>
+                    Participação no desenvolvimento de uma aplicação web
+                    completa, envolvendo a implementação e integração de
+                    funcionalidades distribuídas entre os módulos de cadastro,
+                    autenticação, viagens, perfil de usuário, chat e
+                    administração, utilizando tecnologias de frontend,
+                    backend e banco de dados.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Processo
+                </h4>
+
+                <p>
+                    O projeto foi desenvolvido de forma modular e organizado
+                    em Sprints, partindo do levantamento e documentação dos
+                    requisitos e da modelagem UML até a implementação da
+                    aplicação. A estrutura inclui módulos independentes para
+                    cadastro, login, viagens, perfil, chat e administração,
+                    com PHP responsável pela lógica e comunicação com o
+                    banco de dados MySQL. O projeto também utiliza sessões
+                    PHP, validações de formulários e componentes de
+                    interface com JavaScript e SweetAlert2.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Aprendizados
+                </h4>
+
+                <p>
+                    O desenvolvimento proporcionou experiência prática com
+                    modelagem UML, desenvolvimento web utilizando PHP e
+                    MySQL, gerenciamento de sessões e controle de acesso,
+                    validação de formulários, organização modular de sistemas,
+                    integração entre frontend e backend e planejamento de
+                    desenvolvimento em Sprints. Também envolveu o tratamento
+                    de problemas relacionados a sessões, banco de dados e
+                    restrições de chaves estrangeiras.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TECHNOLOGIES -->
+
+        <div class="project-technologies">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>SweetAlert2</span>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- =================================================
+     PROJECT 02
+     ================================================= -->
+
+<article class="project-card">
+
+    <div class="project-card__header">
+
+        <div>
+
+            <h3>
+                WALLE - Estufa Inteligente
+            </h3>
+
+            <p class="project-card__context">
+                Projeto acadêmico · 2025
+            </p>
+
+        </div>
+
+        <a
+            href="https://github.com/Isabelle-12/Wall-E"
+            class="project-card__github"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub ↗
+        </a>
+
+    </div>
+
+
+    <!-- IMAGES -->
+
+    <div class="project-card__images">
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/WALLE1.jfif"
+                alt="Interface do projeto WALLE - Estufa Inteligente"
+            >
+        </div>
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/WALLE2.jfif"
+                alt="Segunda imagem do projeto WALLE - Estufa Inteligente"
+            >
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT INFO -->
+
+    <div class="project-card__body">
+
+        <div class="project-description">
+
+            <h4>
+                Sobre o projeto
+            </h4>
+
+            <p>
+                O WALLE - Estufa Inteligente é um protótipo acadêmico de IoT
+                e automação desenvolvido para monitorar e controlar o ambiente
+                de uma estufa. O sistema utiliza sensores conectados a um
+                ESP32 para acompanhar temperatura e umidade do solo e realiza
+                a irrigação automaticamente conforme parâmetros definidos.
+                Os dados são disponibilizados em um dashboard web em tempo
+                real, com o objetivo de reduzir o desperdício de água e
+                otimizar o crescimento das plantas.
+            </p>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-detail">
+
+                <h4>
+                    Minha participação
+                </h4>
+
+                <p>
+                    Participação no desenvolvimento do protótipo de IoT,
+                    envolvendo a integração entre hardware, sensores,
+                    sistema de irrigação e interface web. O projeto reúne
+                    desenvolvimento frontend, comunicação com o ESP32,
+                    armazenamento de dados em tempo real e organização dos
+                    diferentes componentes necessários para o funcionamento
+                    da estufa automatizada.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Processo
+                </h4>
+
+                <p>
+                    O sistema foi estruturado em três partes principais:
+                    frontend, código do ESP32 e documentação. O ESP32 foi
+                    integrado aos sensores DHT11 e de umidade do solo e aos
+                    relés responsáveis pelo controle da irrigação. No
+                    frontend, foi desenvolvido um dashboard responsivo com
+                    HTML5, CSS3, Bootstrap 5 e JavaScript, utilizando Chart.js
+                    para exibição dinâmica dos dados. O Firebase Realtime
+                    Database foi utilizado para armazenar os dados dos
+                    sensores e seu histórico em tempo real.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Aprendizados
+                </h4>
+
+                <p>
+                    O projeto proporcionou experiência prática na integração
+                    entre hardware e software, desenvolvimento de soluções
+                    IoT, utilização do ESP32, leitura de sensores e
+                    automação de processos físicos por meio de relés. Também
+                    envolveu aprendizado em desenvolvimento de dashboards
+                    web responsivos, visualização de dados com gráficos,
+                    comunicação em tempo real com Firebase e integração entre
+                    frontend e dispositivos embarcados.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TECHNOLOGIES -->
+
+        <div class="project-technologies">
+
+            <span>ESP32</span>
+            <span>DHT11</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Bootstrap 5</span>
+            <span>Chart.js</span>
+            <span>Firebase</span>
+
+        </div>
+
+    </div>
+
+</article>
+
+<!-- =================================================
+     PROJECT 03
+     ================================================= -->
+
+<article class="project-card">
+
+    <div class="project-card__header">
+
+        <div>
+
+            <h3>
+                ProfissiON
+            </h3>
+
+            <p class="project-card__context">
+                Projeto acadêmico · 2025
+            </p>
+
+        </div>
+
+        <a
+            href="https://github.com/Isabelle-12/ProfissiON"
+            class="project-card__github"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub ↗
+        </a>
+
+    </div>
+
+
+    <!-- IMAGES -->
+
+    <div class="project-card__images">
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/Profission.jfif"
+                alt="Interface do projeto ProfissiON"
+            >
+        </div>
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/Profission2.png"
+                alt="Segunda interface do projeto ProfissiON"
+            >
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT INFO -->
+
+    <div class="project-card__body">
+
+        <div class="project-description">
+
+            <h4>
+                Sobre o projeto
+            </h4>
+
+            <p>
+                O ProfissiON é uma plataforma web interativa desenvolvida para
+                ajudar estudantes a explorar e compreender diferentes carreiras
+                na área de tecnologia da informação. A aplicação busca auxiliar
+                na escolha profissional por meio de questionários, recomendações
+                de carreiras, comparação entre profissões, trilhas de estudo,
+                busca por habilidades e informações sobre o mercado de trabalho.
+            </p>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-detail">
+
+                <h4>
+                    Minha participação
+                </h4>
+
+                <p>
+                    Participação no desenvolvimento de uma plataforma web
+                    voltada à orientação profissional em tecnologia, envolvendo
+                    a construção da interface da aplicação, implementação da
+                    lógica de interação e integração dos diferentes recursos
+                    previstos para a exploração e comparação de carreiras.
+                    O projeto foi estruturado para atender diferentes perfis de
+                    usuário e organizar informações profissionais e educacionais
+                    de forma acessível.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Processo
+                </h4>
+
+                <p>
+                    O desenvolvimento foi organizado em uma arquitetura dividida
+                    entre frontend, backend, banco de dados e documentação.
+                    A interface utiliza HTML5, CSS3 e JavaScript, enquanto o
+                    backend é baseado em Node.js e os dados são estruturados
+                    utilizando SQL. A aplicação foi planejada a partir de
+                    funcionalidades como quiz vocacional, recomendações de
+                    carreira, comparação de profissões, trilhas de estudo,
+                    busca por habilidades e informações sobre o mercado.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Aprendizados
+                </h4>
+
+                <p>
+                    O projeto proporcionou experiência no desenvolvimento de
+                    aplicações web com separação entre frontend, backend e
+                    banco de dados, além de contato com Node.js, JavaScript e
+                    SQL. Também envolveu aprendizado na organização de sistemas
+                    com diferentes perfis de acesso e na construção de
+                    funcionalidades voltadas à recomendação, comparação e
+                    apresentação de informações de forma estruturada.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TECHNOLOGIES -->
+
+        <div class="project-technologies">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>SQL</span>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- =================================================
+     PROJECT 04
+     ================================================= -->
+
+<article class="project-card">
+
+    <div class="project-card__header">
+
+        <div>
+
+            <h3>
+                Analista de Fluxo
+            </h3>
+
+            <p class="project-card__context">
+                Projeto acadêmico · 2026
+            </p>
+
+        </div>
+
+        <a
+            href="https://github.com/JoaoVictor9805/Esp32Performance"
+            class="project-card__github"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub ↗
+        </a>
+
+    </div>
+
+
+    <!-- IMAGES -->
+
+    <div class="project-card__images">
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/Catraca.jpeg"
+                alt="Protótipo físico do projeto Analista de Fluxo"
+            >
+        </div>
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/Catraca2.jpeg"
+                alt="Detalhe da catraca do projeto Analista de Fluxo"
+            >
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT INFO -->
+
+    <div class="project-card__body">
+
+        <div class="project-description">
+
+            <h4>
+                Sobre o projeto
+            </h4>
+
+            <p>
+                O Analista de Fluxo é um sistema embarcado desenvolvido com
+                ESP32 para monitorar em tempo real a entrada e saída de pessoas
+                em um ambiente, calcular a lotação ocupada e disponibilizar
+                essas informações por meio de um servidor web acessível na
+                mesma rede. O sistema combina sensores infravermelhos,
+                encoder de catraca, display OLED e alertas sonoros, além de
+                armazenar dados históricos, logs e métricas de desempenho.
+            </p>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-detail">
+
+                <h4>
+                    Minha participação
+                </h4>
+
+                <p>
+                    Responsável pela estrutura principal do firmware do
+                    sistema, com foco na implementação da multitarefa utilizando
+                    FreeRTOS e na distribuição das responsabilidades entre os
+                    dois núcleos do ESP32. Também atuei na implementação da
+                    persistência de dados e logs em LittleFS, garantindo que
+                    as informações do sistema fossem preservadas entre
+                    reinicializações e quedas de energia.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Processo
+                </h4>
+
+                <p>
+                    O processamento foi dividido entre duas tarefas do
+                    FreeRTOS fixadas em núcleos diferentes. A TaskSensores
+                    realiza a leitura dos sensores IR, o processamento do
+                    encoder e métricas de desempenho, enquanto o loop principal
+                    administra a rede, o servidor web, a API JSON, o display
+                    OLED, a sincronização de horário via NTP e a persistência
+                    periódica dos dados. O acesso às informações compartilhadas
+                    entre os núcleos é protegido por mutexes, enquanto o
+                    LittleFS armazena dados, gráficos, logs e páginas web.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Aprendizados
+                </h4>
+
+                <p>
+                    O projeto aprofundou conhecimentos em programação
+                    concorrente com FreeRTOS em microcontroladores dual-core,
+                    sincronização entre tarefas com mutexes, interrupções de
+                    hardware, máquinas de estado para tratamento de sensores,
+                    persistência de dados estruturados em LittleFS e
+                    desenvolvimento de servidor web e API REST diretamente no
+                    ESP32. Também proporcionou experiência com profiling,
+                    monitoramento de CPU, memória e stack das tarefas e
+                    integração entre sensores, atuadores e comunicação de rede.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TECHNOLOGIES -->
+
+        <div class="project-technologies">
+
+            <span>C++</span>
+            <span>ESP32</span>
+            <span>FreeRTOS</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>LittleFS</span>
+            <span>WebServer</span>
+            <span>NTPClient</span>
+            <span>SSD1306</span>
+            <span>DFPlayer Mini</span>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- =================================================
+     PROJECT 05
+     ================================================= -->
+
+<article class="project-card">
+
+    <div class="project-card__header">
+
+        <div>
+
+            <h3>
+                Criador de fichas para RPG
+            </h3>
+
+            <p class="project-card__context">
+                Projeto pessoal · Primeiro projeto em Python
+            </p>
+
+        </div>
+
+        <a
+            href="https://github.com/EATcement/MAGOsite"
+            class="project-card__github"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub ↗
+        </a>
+
+    </div>
+
+
+    <div class="project-card__images">
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/oMago.gif"
+                alt="Demonstração do criador de fichas para RPG"
+            >
+        </div>
+
+        <div class="project-image">
+            <img
+                src="assets/imgs/projeto-05-02.png"
+                alt="Ficha de RPG gerada pelo sistema"
+            >
+        </div>
+
+    </div>
+
+
+    <div class="project-card__body">
+
+        <div class="project-description">
+
+            <h4>
+                Sobre o projeto
+            </h4>
+
+            <p>
+                Sistema desenvolvido em Python para criação e gerenciamento
+                de fichas de RPG inspiradas em D&D. O projeto permite criar
+                personagens, editar e salvar fichas, gerar documentos em PDF
+                e também oferece ferramentas auxiliares para jogadores e
+                mestres, como inventário, rolagem de dados, fichas de monstros
+                e diário de aventura.
+            </p>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-detail">
+
+                <h4>
+                    Minha participação
+                </h4>
+
+                <p>
+                    Desenvolvi o projeto com dois colégas de sala. Fui responsável
+                    pela lógica do sistema, criação das fichas de jogador e mestre, Lógica e estética visual dos dados e parte das fichas em PDF. Persistência
+                    dos dados e geração dos PDFs foram desenvolvidas pelos meus colegolas.
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Processo
+                </h4>
+
+                <p>
+                    O projeto foi desenvolvido de forma experimental, conforme
+                    novas ideias e necessidades surgiam. Começamos pela criação
+                    das fichas e posteriormente adicionei funcionalidades para
+                    edição, gerenciamento e ferramentas de apoio às sessões
+                    de RPG.
+                </p>
+
+            </div>
+
+
+            <div class="project-detail">
+
+                <h4>
+                    Aprendizados
+                </h4>
+
+                <p>
+                    Foi meu primeiro contato mais aprofundado com Python e um
+                    projeto importante para aprender sobre modularização,
+                    manipulação de arquivos, persistência de dados, geração
+                    de PDFs e construção de sistemas interativos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-technologies">
+
+            <span>Python</span>
+            <span>FPDF</span>
+            <span>Pickle</span>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+        <!-- =================================================
+             EDUCATION
+             ================================================= -->
+
+        <section class="portfolio-section" id="education">
+
+            <div class="section-heading">
+
+                <span class="section-heading__number">
+                    04
+                </span>
+
+                <div>
+                    <p class="section-heading__label">
+                        FORMAÇÃO
+                    </p>
+
+                    <h2>
+                        Formação acadêmica
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-card__date">
+                    2025 — Atual
+                </div>
+
+                <div>
+
+                    <h3>
+                        BES - Bacharelado em Engenharia de Software
+                    </h3>
+
+                    <p class="education-card__institution">
+                       Pontifícia Universidade Católica do Paraná
+                    </p>
+
+              
+
+                </div>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-card__date">
+                    2020 — 2023
+                </div>
+
+                <div>
+
+                    <h3>
+                        Ensino Médio
+                    </h3>
+
+                    <p class="education-card__institution">
+                        Colégio Estadual Moradias Monteiro Lobato
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SKILLS
+             ================================================= -->
+
+        <section class="portfolio-section" id="skills">
+
+            <div class="section-heading">
+
+                <span class="section-heading__number">
+                    05
+                </span>
+
+                <div>
+                    <p class="section-heading__label">
+                        COMPETÊNCIAS
+                    </p>
+
+                    <h2>
+                        Habilidades
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-group">
+
+                    <h3>
+                        Desenvolvimento
+                    </h3>
+
+                    <div class="skill-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>C++</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Banco de dados
+                    </h3>
+
+                    <div class="skill-list">
+                        <span>MySQL</span>
+                        <span>MariaDB</span>
+                        <span>SQL</span>
+                        <span>Firebase</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Ferramentas
+                    </h3>
+
+                    <div class="skill-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>PyCharm</span>
+                        <span>Astah</span>
+                        <span>Pacote Office</span>
+                        <span>IntelliJ IDEA</span>
+                        <Span>Vms</Span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Outros
+                    </h3>
+
+                    <div class="skill-list">
+                        <span>Modelagem</span>
+                        <span>Prototipação</span>
+                        <span>Documentação</span>
+                        <span>Desenvolvimento</span>
+                        <span>Controle de qualidade</span>
+                        <span>Testes</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+      <!-- =================================================
+     CERTIFICATES
+     ================================================= -->
+
+<section class="portfolio-section" id="certificates">
+
+    <div class="section-heading">
+
+        <span class="section-heading__number">
+            06
+        </span>
+
+        <div>
+            <p class="section-heading__label">
+                CERTIFICADOS
+            </p>
+
+            <h2>
+                Cursos e certificações
+            </h2>
+        </div>
+
+    </div>
+
+    <p class="section-intro">
+        Certificações, cursos e formações complementares que
+        contribuíram para minha formação técnica e profissional.
+    </p>
+
+
+    <div class="certificates-list">
+
+        <!-- CERTIFICATE 01 -->
+
+        <article class="certificate-card">
+
+            <div class="certificate-card__image">
+                <img
+                    src="assets/imgs/certificado1.jfif"
+                    alt="Certificado de Introdução a Cibersegurança"
+                >
+            </div>
+
+            <div class="certificate-card__content">
+
+                <p class="certificate-card__date">
+                    2026
+                </p>
+
+                <h3>
+                    Introdução a Cibersegurança
+                </h3>
+
+                <p class="certificate-card__issuer">
+                    Cisco Networking Academy
+                </p>
+
+                <p>
+                    Certificado obtido após concluir o curso de Introdução a Cibersegurança, abordando conceitos fundamentais de segurança cibernética, ameaças e vulnerabilidades, práticas de proteção e conscientização sobre segurança digital.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- CERTIFICATE 02 -->
+
+        <article class="certificate-card">
+
+            <div class="certificate-card__image">
+                <img
+                    src="assets/imgs/certificado2.jpeg"
+                    alt="Certificado 2"
+                >
+            </div>
+
+            <div class="certificate-card__content">
+
+                <p class="certificate-card__date">
+                    2026
+                </p>
+
+                <h3>
+                    Arco ocupacional Auxiliar de escritório.
+                </h3>
+
+                <p class="certificate-card__issuer">
+                    AEFSPR
+                </p>
+
+                <p>
+                    Certificado obtido após concluir 400 horas de aprendizado teórico na instituição AEFSPR, e 1440 horas de aprendizado prático trabalhando na empresa URBS, totalizando 1840 horas de aprendizado e experiência prática.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- CERTIFICATE 03 -->
+
+        <article class="certificate-card">
+
+            <div class="certificate-card__image">
+                <img
+                    src="assets/imgs/certificado3.png"
+                    alt="Certificado 3"
+                >
+            </div>
+
+            <div class="certificate-card__content">
+
+                <p class="certificate-card__date">
+                    2026
+                </p>
+
+                <h3>
+                    Desenvolvedor de Sistemas Computacionais
+                </h3>
+
+                <p class="certificate-card__issuer">
+                    Pontifícia Universidade Católica do Paraná
+                </p>
+
+                <p>
+                    Disciplinas que compoem o certificado: Raciocínio Algorítmico - Resolução de Problemas Estruturados em Computação - Banco de Dados - Programação Orientada a Objetos - Experiência Criativa: Projetando Soluções Computacionais - Experiência Criativa: Navegando pela Engenharia de Software
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- CERTIFICATE 04 -->
+
+        <article class="certificate-card">
+
+            <div class="certificate-card__image">
+                <img
+                    src="assets/imgs/certificado3.png"
+                    alt="Certificado 4"
+                >
+            </div>
+
+            <div class="certificate-card__content">
+
+                <p class="certificate-card__date">
+                    2026
+                </p>
+
+                <h3>
+                    Desenvolvedor WEB
+                </h3>
+
+                <p class="certificate-card__issuer">
+                    Pontifícia Universidade Católica do Paraná
+                </p>
+
+                <p>
+                    Disciplinas que compoem o certificado: Raciocínio Algorítmico - Resolução de Problemas Estruturados em Computação - Banco de Dados - Programação Web- Programação Orientada a Objetos - Experiência Criativa: Projetando Soluções Computacionais - Experiência Criativa: Navegando pela Engenharia de Software
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- CERTIFICATE 05 -->
+
+        <article class="certificate-card">
+
+            <div class="certificate-card__image">
+                <img
+                    src="assets/imgs/certificado3.png"
+                    alt="Certificado 5"
+                >
+            </div>
+
+            <div class="certificate-card__content">
+
+                <p class="certificate-card__date">
+                    2026
+                </p>
+
+                <h3>
+                    Analista de Requisitos
+                </h3>
+
+                <p class="certificate-card__issuer">
+                    Pontifícia Universidade Católica do Paraná
+                </p>
+
+                <p>
+                    Disciplinas que compoem o certificado:
+                    Modelagem de Processos - Engenharia de Requisitos - Criação de Modelos Computacionais - Interface Humano Computador - Experiência Criativa: Projetando Soluções Computacionais - Experiência Criativa: Navegando pela Engenharia de Software
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+        <!-- =================================================
+             CONTACT
+             ================================================= -->
+
+        <section class="portfolio-section portfolio-section--contact" id="contact">
+
+            <div class="section-heading">
+
+                <span class="section-heading__number">
+                    07
+                </span>
+
+                <div>
+                    <p class="section-heading__label">
+                        CONTATO
+                    </p>
+
+                    <h2>
+                        Vamos conversar
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-intro">
+
+                    <p>
+                        Caso queira conhecer melhor meu trabalho,
+                        projetos ou trajetória, estes são os canais
+                        onde posso ser encontrado.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-links">
+
+                    <a
+                       
+                    >
+                        <span>E-mail:</span>
+                        <span>iscristhan@gmail.com</span>
+                    </a>
+
+                       <a
+                        href="https://github.com/EATcement"
+                        class="contact-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>GitHub</span>
+                        <span>↗</span>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/iscris"
+                        class="contact-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>LinkedIn</span>
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="portfolio-footer">
+
+            <p>
+                © 2026 Eu mesmo, Israel!
+            </p>
+
+            <p>
+                Portfólio :p
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         PERSONAL SCREEN
+         ===================================================== -->
+
+    <main class="screen screen--personal" id="personalScreen" hidden>
+
+        <div class="reveal" id="revealContainer">
+
+            <img
+                class="reveal__media"
+                id="revealImage"
+                src="assets/imgs/rainbow1.png"
+                alt=""
+            >
+
+            <img
+                class="reveal__media"
+                id="revealGif"
+                src="assets/gifs/rainbowfast1.gif"
+                alt=""
+                hidden
+            >
+
+       
+            <img
+                class="reveal__nerd"
+                id="nerd"
+                src="assets/imgs/nerd.webp"
+                alt="nerds"
+            >
+
+
+       
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         AUDIO
+         ===================================================== -->
+
+    <audio id="switchSound" preload="auto">
+        <source
+            src="assets/sounds/light-switch.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+    <audio id="revealSound" preload="auto">
+        <source
+            src="assets/sounds/smilingIntro.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

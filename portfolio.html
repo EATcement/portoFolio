@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="css/Portfolio.css">
+</head>
+
+<body>
+
+ <div
+  id="audioPrompt"
+  class="audio-prompt"
+  role="dialog"
+  aria-modal="true"
+  >
+
+   <div class="audio-prompt__box">
+     <p class="audio-prompt__title">ALERTA ALERTA</p>
+
+     <p class="audio-prompt__text">
+      BEM-VINDO
+     </p>
+
+     <button
+       type="button"
+       id="audioPromptButton"
+       class="audio-prompt__button"
+     >
+        [ obrigado! ]
+     </button>
+    </div>
+  </div>
+
+  
+
+
+  
+  <!-- Purely decorative CRT effect layer (scanlines / vignette / noise).
+       Sits above everything, ignores pointer events. -->
+  <div class="crt-fx" aria-hidden="true"></div>
+
+  <img
+    class="logo"
+    src="assets/gifs/rainbowfast2.gif"
+    alt="Logo"
+  >
+
+  <!-- ===================== OPTIONS MENU ===================== -->
+  <button
+    type="button"
+    id="menuToggle"
+    class="menu-toggle"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="optionsMenu"
+    aria-label="Open options menu"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div id="optionsMenu" class="options-menu" hidden>
+    <p class="options-menu__title">OPTIONS</p>
+
+    <label class="menu__toggle" for="cowboysCheckbox">
+      <input type="checkbox" id="cowboysCheckbox" class="menu__checkbox">
+      <span class="menu__checkbox-box" aria-hidden="true"></span>
+      COWBOYS
+    </label>
+  </div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="screen screen--professional" id="professionalScreen">
+
+    <header class="doc-header">
+      <img
+       class="pfp"
+       id="profileGif"
+       src="assets/gifs/scared.gif"
+       data-hover-src="assets/gifs/happy.gif"
+       alt="Profile picture"
+      >
+      <div class="doc-header__text">
+        <h1 class="doc-header__name">Israel Cristhian</h1>
+        <p class="doc-header__title">A.K.A EatCement</p>
+        <p class="doc-header__title">Developer and concrete connoisseur</p>
+        <p class="doc-header__title">send Help</p>
+      </div>
+    </header>
+
+    <hr class="doc-divider">
+
+    <section class="doc-section" id="section-summary">
+      <h2 class="doc-section__heading">About</h2>
+      <div class="doc-section__body">My name is Israel. I'm from Brazil and I hate video games. I eat nails for breakfast and tame Siberian tigers in my spare free time. I like video games and I know how to kill skeletons.
+      This is the "personal" version of my portfolio, meant to both cover the "Coleção de criações" and give a closer look into my personality, humor, hobbies, and whatnots. I've always hated when I have to fill out an "About me" section in job applications and such
+      with generic, AI sounding, bland text because that is what sounds good in a curriculum and that’s what an AI would mark as "professional". So in here I wanted to add a little piece of myself, my blood, sweat, tears and many other bodily juices, in the hopes that whoever reviews it
+      sees me as an actual individual.
+      </div>
+    </section>
+
+    <section class="doc-section" id="section-summary">
+      <h2 class="doc-section__heading">Status</h2>
+      <div class="doc-section__body">Alive and living the life~</div>
+    </section>
+
+
+    <section class="doc-section doc-section--media" id="section-example">
+
+      <div class="doc-section__content">
+        <h2 class="doc-section__heading">DNA</h2>
+
+        <div class="doc-section__body" >
+           CHROMOSOME  & Lenght in bp :
+         <ul>
+           <li>     A1 = 239.302.903 </li>
+           <li>     A2 = 169.043.629 </li>
+           <li>     A3 = 142.459.683 </li>
+           <li>     B1 = 205.241.052</li>
+           <li>     B2 = 154.261.789  </li>
+           <li>     B3 = 148.491.654 </li>
+           <li>     B4 = 144.259.557 </li>
+           <li>     C1 = 221.441.202  </li>
+           <li>     C2 = 157.659.299 </li>
+           <li>     D1 = 116.869.131 </li>
+           <li>     D2 = 89.822.065  </li>
+           <li>     D3 = 95.741.729</li>
+           <li>     D4 = 96.020.406 </li>
+           <li>     E1 = 63.002.102  </li>
+           <li>     E2 = 64.039.838 </li>
+           <li>     E3 = 43.024.555 </li>
+           <li>     F1 = 68.669.167  </li>
+           <li>     F2 = 82.763.536 </li>
+           <li>     X  = 126.427.096 </li>
+          </ul> 
+
+        </div>
+      </div>
+
+      <img
+       class="section-gif"
+       src="assets/gifs/DNA.gif"
+       alt="Decorative GIF"
+     >
+
+    </section>
+
+    <section class="doc-section" id="section-contact">
+      <h2 class="doc-section__heading">Endereço</h2>
+      <div class="doc-section__body">Rua dos bobos, 0 – Curitiba – PR,</div>
+    </section>
+    
+
+    <section class="doc-section" id="section-experience">
+      <h2 class="doc-section__heading">Línguas</h2>
+      <div class="doc-section__body">
+        <ul>
+          <li>[HTML]    [CSS]    [JavaScript]</li>
+          <li>[PHP]     [MySQL]  [PYTHON]</li>
+          <li>[JAVA]    [C++]    [C#]</li>
+      
+        </ul>
+      </div>
+    </section>
+
+    <section class="doc-section" id="section-education">
+      <h2 class="doc-section__heading">Skills</h2>
+      <div class="doc-section__body"><ul>
+          <li>[Modelagem]                [Prototação]</li>
+          <li>[Desenvolvimento]          [Documentação]  </li>
+          <li>[Controle de qualidade]    [Testes]   </li>
+      
+        </ul></div>
+    </section>
+
+    <section class="doc-section" id="section-skills">
+      <h2 class="doc-section__heading">Idiomas</h2>
+      <div class="doc-section__body">Português nativo / Inglês avançado (Ouço e escrevo perfeitamente [apenas não sou fluente por causa do sotaque {e de alguns eventuais erros de gramática.}])</div>
+    </section>
+
+    
+
+    <!-- Extra low-budget-early-web filler so the page has some
+         length to it before the archive/signal section. -->
+    <section class="doc-section" id="section-log">
+      <h2 class="doc-section__heading">System Info</h2>
+      <div class="doc-section__body doc-section__body--terminal">
+        <p>&gt; Este portifólio ainda está sendo construido.</p>
+        <p>&gt; É para ser algo pessoal e expressivo.</p>
+        <p>&gt; Basicamente qualquer coisa que eu ache legal desenvolver.</p>
+        <p>&gt; Para um resumo curricular sério, POR FAVOR, permaneça na página anterior.</p>
+        <p>&gt; Not yet fully compatible with mobile devices.</p>
+      </div>
+    </section>
+
+    <section class="doc-section" id="section-guestbook">
+      <h2 class="doc-section__heading">Guestbook</h2>
+      <div class="doc-section__body doc-section__body--empty">
+        No entries yet.
+      </div>
+    </section>
+
+    <!-- ===================== ARCHIVE / SIGNAL SECTION ===================== -->
+    <section class="doc-section signal-section" id="section-signal">
+      <div class="doc-section__body">
+      
+        <img
+          class="signal-gif"
+          id="proximityGif"
+          src="assets/imgs/oMago.gif"
+          alt="Looping archived clip, mostly static"
+        >
+      </div>
+    </section>
+
+  <section class="doc-section showcase-section" id="section-showcase">
+
+    <h2 class="doc-section__heading">Coleção de criações</h2>
+
+    <p class="showcase-subtitle">
+      Coisas, hobbies e criações.
+    </p>
+
+    <!-- ================= PROJECT 1 ================= -->
+    <article class="showcase-project">
+
+      <div class="showcase-project__text">
+        <h3 class="showcase-project__title">
+          Confeitarias e salgaderias
+        </h3>
+
+        <p class="showcase-project__description">
+          De semana em semana, gosto de fazer doces, assar bolos, brownies, cookies, queijadinhas, pudins, esses são todos os doces que eu sei fazer, salgados como coxinhas, esfirras, baurus e pães. Infelizmente, eu não tenho o costume de, durante o curto período de vida das minhas criações comestíveis, tirar fotos delas. Anexei uma imagem ilustrativa pra dar uma ideai da skill do pai.
+        </p>
+      </div>
+
+      <div class="showcase-project__image">
+        <img
+          src="assets/imgs/ilustracao.jpg"
+          alt="Screenshot of Project One"
+        >
+      </div>
+
+    </article>
+
+    <!-- ================= PROJECT 1 ================= -->
+    <article class="showcase-project">
+
+      <div class="showcase-project__text">
+        <h3 class="showcase-project__title">
+           O Molho
+        </h3>
+
+        <p class="showcase-project__description">
+          Molhos, especialmente maionese verde e molhos para macarrão, são outra categoraia de comidas que sei fazer, além disso n sei cozinhar muita coisa kk.
+      
+        </p>
+      </div>
+
+      <div class="showcase-project__image">
+        <img
+          src="assets/imgs/molhos.jpg"
+          alt="Screenshot of Project One"
+        >
+      </div>
+
+    </article>
+
+    <!-- ================= PROJECT 2 ================= -->
+    <article class="showcase-project">
+
+      <div class="showcase-project__text">
+        <h3 class="showcase-project__title">
+          Video games
+        </h3>
+
+        <p class="showcase-project__description">
+          Videogames em geral são um grande hobby meu e os maiores culpados por eu estar cursando engenharia de software. Estes são alguns que eu platinei, porém meu favorito é TF2 e o melhor que já joguei foi RDR2.
+        </p>
+      </div>
+
+      <div class="showcase-project__image">
+        <img
+          src="assets/imgs/platina.png"
+          alt="Screenshot of Project Two"
+        >
+      </div>
+
+    </article>
+
+    <!-- ================= PROJECT 2 ================= -->
+    <article class="showcase-project">
+
+      <div class="showcase-project__text">
+        <h3 class="showcase-project__title">
+          Project Two
+        </h3>
+
+        <p class="showcase-project__description">
+          Minecraft fez a infância de muitos, incluindo a minha. Após a grande catástrofe de 2025, quando meu celular estragou e perdi meus mundos da bedrock edition, apenas esta construção, que foi feita na versão JAVA sobreviveu.
+        </p>
+      </div>
+
+      <div class="showcase-project__image">
+        <img
+          src="assets/imgs/torre1.png"
+          alt="Screenshot of Project Two"
+        >
+        <img
+          src="assets/imgs/torre2.png"
+          alt="Screenshot of Project Two"
+        >
+      </div>
+      
+
+    </article>
+
+    <!-- ================= PROJECT 2 ================= -->
+    <article class="showcase-project">
+
+      <div class="showcase-project__text">
+        <h3 class="showcase-project__title">
+          ESTE MESMO SITE QUE VOCÊ ESTA VENDO!!!
+        </h3>
+
+        <p class="showcase-project__description">
+          The portfolio itself counts, right? There was creativity and self-expression involved in the development, so it's technically a piece of art, thus part of my hobbies!!!
+        
+        </p>
+      </div>
+
+      <div class="showcase-project__image">
+        <img
+          src="assets/imgs/portfolio.png"
+          alt="Screenshot of Project Two"
+        >
+      </div>
+
+    </article>
+
+    <!-- ================= MUSIC ================= -->
+    <div class="showcase-music">
+
+      <h3 class="showcase-project__title">
+        MUSIC!
+      </h3>
+
+      <p class="showcase-music__text">
+        I once tried my hand at music making. Turns out composing music is much harder than listening to it, so  I gave up after making 7 seconds of it. And yes, it was made im Mario paint 1992 for the SNES.
+      </p>
+
+      <video
+        id="showcaseMusic"
+        class="showcase-music__video"
+        controls
+        preload="metadata"
+      >
+        <source
+          src="assets/videos/music.mp4"
+          type="video/mp4"
+        >
+        Your browser does not support HTML5 video.
+      </video>
+
+    </div>
+
+   </section>
+
+   <section class="doc-section showcase-gallery-section" id="section-gallery">
+
+      <h2 class="doc-section__heading">Galeria</h2>
+
+      <p class="showcase-subtitle">
+        Aqui fica uma coleçõe dos desenhos mais apresentáveis que fiz, alguns eu legitimamente gosto, outros foram feitos com irônia e humor em mente e não deveriam ser considerados representações de minha pessoa. A maioria dos desenhos foram feitos dentro do jogo Different Strokes, joguinho em que um usuário edita o desenho do outro, tem uma paleta de cores limitada mas é muito divertido. 
+      </p>
+
+      <div class="showcase-gallery">
+
+        <img
+          src="assets/imgs/gallery/draw1.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/Draw2.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/Draw3.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/Draw4.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/horse.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/skull.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/glimglam.jpeg"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/litch.jpeg"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/DIO.jpeg"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/blackS.png"
+          alt="Gallery image 1"
+          class="gallery-image"
+        >
+
+        <img
+          src="assets/imgs/gallery/bob.png"
+          alt="Gallery image 2"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/world.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+
+        <img
+          src="assets/imgs/gallery/bonny.png"
+          alt="Gallery image 3"
+          class="gallery-image"
+        >
+
+        <img
+          src="assets/imgs/gallery/buffwell.png"
+          alt="Gallery image 4"
+          class="gallery-image"
+        >
+
+       <img
+          src="assets/imgs/gallery/egg.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+
+        
+        
+         <img
+          src="assets/imgs/gallery/mogekoh.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/noelle.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/pants.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/rock.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >  <img
+          src="assets/imgs/gallery/uncle.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > <img
+          src="assets/imgs/gallery/weirdUglyMiku.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+        <img
+          src="assets/imgs/gallery/kiss.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >
+           <img
+          src="assets/imgs/gallery/Draw5.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        >  <img
+          src="assets/imgs/gallery/TWI.png"
+          alt="Gallery image 6"
+          class="gallery-image"
+        > 
+        
+
+      </div>
+
+   </section>
+
+    <section class="doc-section doc-section--media" id="section-example">
+
+      <div class="doc-section__content">
+        <h2 class="doc-section__heading">About</h2>
+
+        <div class="doc-section__body">
+          Yeah, I guess for now thats it. Thanks for visiting!
+        </div>
+      </div>
+
+      <img
+       class="section-gif"
+       src="assets/imgs/oMago.gif"
+       alt="Decorative GIF"
+     >
+
+    </section>
+
+
+
+
+    
+  </main>
+
+  <!-- ===================== FLOATING COWBOYS VIDEO ===================== -->
+  <div id="floatingVideo" class="floating-video" hidden>
+    <p class="floating-video__label">
+      <span class="floating-video__dot" aria-hidden="true"></span>
+      REC
+    </p>
+    <video
+      id="cowboysVideoEl"
+      class="floating-video__el"
+      playsinline
+    ></video>
+  </div>
+
+  <!-- ===================== IMAGE LIGHTBOX (Gallery / Showcase) ===================== -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button
+      type="button"
+      id="lightboxClose"
+      class="lightbox__close"
+      aria-label="Close image viewer"
+    >[ X ]</button>
+
+    <div class="lightbox__frame">
+      <img id="lightboxImage" class="lightbox__image" src="" alt="">
+    </div>
+  </div>
+
+  <!-- Background ambience -->
+  <audio autoplay loop>
+    <source src="assets/sounds/backgroundEdit.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <script src="js/Portfolio.js"></script>
+</body>
+</html>

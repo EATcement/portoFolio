@@ -1,0 +1,753 @@
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  --bg: #0b0c0a;
+  --bg-panel: #121310;
+  --fg: #d9d7c9;
+  --fg-dim: #8a8a7a;
+  --accent: #b7a25a;
+  --accent-dim: #5b5240;
+  --border: #3a3a30;
+  --mono: "Courier New", Courier, "Consolas", monospace;
+}
+
+body {
+  position: relative;
+  font-family: var(--mono);
+  color: var(--fg);
+
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.98)),
+    url("../assets/imgs/wolfbig.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   INITIAL AUDIO PROMPT
+   ========================================================= */
+
+.audio-prompt {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(0, 0, 0, 0.82);
+
+  padding: 24px;
+}
+
+.audio-prompt[hidden] {
+  display: none;
+}
+
+.audio-prompt__box {
+  width: min(420px, 100%);
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.015),
+      rgba(255, 255, 255, 0.015)
+    ),
+    var(--bg-panel);
+
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.8),
+    inset 0 0 25px rgba(0, 0, 0, 0.6);
+
+  text-align: center;
+}
+
+.audio-prompt__title {
+  margin-bottom: 20px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.audio-prompt__text {
+  margin-bottom: 8px;
+
+  color: var(--fg);
+
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.audio-prompt__hint {
+  margin-bottom: 24px;
+
+  color: var(--fg-dim);
+
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.audio-prompt__button {
+  padding: 10px 18px;
+
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  color: var(--fg);
+
+  background: var(--bg);
+
+  border: 1px solid var(--border);
+
+  cursor: pointer;
+}
+
+.audio-prompt__button:hover,
+.audio-prompt__button:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+
+
+/* =========================================================
+   LAYOUT / SCREENS
+   ========================================================= */
+.screen {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.screen--professional {
+  max-width: 1000px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 96px 48px 140px;
+
+  background: rgba(0, 0, 0, 1.96);
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 0 35px 48px;
+  filter: saturate(0.8) contrast(1.05);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.doc-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 230px;
+  flex-wrap: nowrap;
+  margin-bottom: 32px;
+}
+
+.doc-header__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.pfp {
+  width: 296px;
+  height: 250px;
+  object-fit: cover;
+  border: 1px rgb(22, 22, 22) ;
+  filter: grayscale(0.35) contrast(1.05) brightness(0.9);
+  flex-shrink: 0;
+}
+
+.doc-header__name {
+  font-family: var(--mono);
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: var(--fg);
+  text-shadow: 0 0 4px rgba(183, 162, 90, 0.25);
+}
+
+.doc-header__title {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--fg-dim);
+  font-style: italic;
+}
+
+.doc-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0 40px;
+}
+
+/* =========================================================
+   DOCUMENT SECTIONS / PANELS
+   ========================================================= */
+.doc-section {
+  margin-bottom: 0px;
+  padding: 10px 12px;
+
+}
+
+.doc-section__heading {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  padding-bottom: 0px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+  text-shadow: 0 0 3px rgba(183, 162, 90, 0.2);
+}
+
+.doc-section__body {
+  min-height: 20px;
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.doc-section__body--terminal p {
+  color: var(--fg-dim);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.doc-section__body--empty {
+  color: var(--fg-dim);
+  font-style: italic;
+}
+
+/* =========================================================
+   SHOWCASE
+   ========================================================= */
+
+.showcase-section {
+  margin-top: 80px;
+}
+
+.showcase-subtitle {
+  color: var(--fg-dim);
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.showcase-project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  padding: 28px 0;
+
+  border-top: 1px solid var(--border);
+}
+
+.showcase-project:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.showcase-project__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.showcase-project__title {
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  color: var(--accent);
+  text-transform: uppercase;
+
+  text-shadow: 0 0 3px rgba(183, 162, 90, 0.2);
+}
+
+.showcase-project__description {
+  color: var(--fg);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.showcase-project__image {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.showcase-project__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border: 2px solid var(--border);
+
+  filter:
+    grayscale(0.15)
+    contrast(1.05)
+    brightness(0.9);
+
+  box-shadow:
+    inset 0 0 16px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SHOWCASE MUSIC
+   ========================================================= */
+
+.showcase-music {
+  margin-top: 40px;
+  padding-top: 28px;
+
+  border-top: 1px solid var(--border);
+}
+
+.showcase-music__text {
+  margin-bottom: 16px;
+
+  color: var(--fg-dim);
+  font-size: 13px;
+}
+
+.showcase-music__video {
+  display: block;
+
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+
+  border: 2px solid var(--border);
+
+  background: #000;
+
+  box-shadow:
+    inset 0 0 18px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   SHOWCASE IMAGE GALLERY
+   ========================================================= */
+
+.showcase-gallery-section {
+  margin-top: 80px;
+}
+
+.showcase-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.gallery-image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  border: 1px solid var(--border);
+
+  background: #000;
+
+  filter:
+    grayscale(0.15)
+    contrast(1.05)
+    brightness(0.9);
+
+  cursor: pointer;
+
+  transition:
+    filter 0.15s ease,
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.gallery-image:hover {
+  filter:
+    grayscale(0)
+    contrast(1.08)
+    brightness(1);
+
+  border-color: var(--accent-dim);
+
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   DOCUMENT SECTION WITH SIDE GIF
+   ========================================================= */
+
+.doc-section--media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.doc-section--media .doc-section__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-gif {
+  width: 180px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+
+
+  filter: grayscale(0.3) contrast(1.05);
+}
+
+/* =========================================================
+   ARCHIVE / SIGNAL SECTION (proximity GIF)
+   ========================================================= */
+.signal-section {
+  text-align: center;
+  margin-top: 2000px;
+  margin-bottom: 2000px;
+}
+
+.signal-caption {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--fg-dim);
+  margin: 8px 0;
+}
+
+.signal-gif {
+  width: 126px;
+  height: 126px;
+  object-fit: cover;
+  border: 2px solid rgb(4, 58, 83);
+  filter: grayscale(0.3) contrast(1.05);
+  display: block;
+  margin: -370px ;
+  box-shadow: 0 0 20px gold;
+ 
+}
+
+/* =========================================================
+   IMAGE LIGHTBOX (Gallery / Showcase)
+   ========================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
+
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__frame {
+  max-width: 90vw;
+  max-height: 85vh;
+
+  padding: 6px;
+
+  background-color: #000;
+  border: 2px solid var(--border);
+
+  box-shadow:
+    inset 0 0 16px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox__image {
+  display: block;
+
+  max-width: 100%;
+  max-height: calc(85vh - 12px);
+  width: auto;
+  height: auto;
+
+  filter: grayscale(0.15) contrast(1.05) brightness(0.95);
+}
+
+/* Fallback for the dragstart prevention in Portfolio.js — belt and
+   suspenders against the native browser image-drag that can freeze
+   page interactivity when combined with the overlay swap. */
+.gallery-image,
+.showcase-project__image img,
+.lightbox__image {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.lightbox__close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 4001;
+
+  padding: 6px 12px;
+
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  color: #d34a4a;
+  background-color: var(--bg-panel);
+  border: 1px solid #6b2b2b;
+
+  cursor: pointer;
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  color: #ff6b6b;
+  border-color: #a33333;
+}
+
+/* =========================================================
+   OPTIONS MENU (hamburger)
+   ========================================================= */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 1000;
+  width: 40px;
+  height: 34px;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: var(--accent-dim);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--fg-dim);
+}
+
+.options-menu {
+  position: fixed;
+  top: 62px;
+  right: 24px;
+  z-index: 1000;
+  width: 190px;
+  padding: 16px;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), inset 0 0 18px rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+
+.options-menu[hidden] {
+  display: none;
+}
+
+.options-menu__title {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+
+.menu__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg);
+  letter-spacing: 1px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.menu__checkbox-box {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--fg-dim);
+  flex-shrink: 0;
+}
+
+.menu__checkbox:checked + .menu__checkbox-box::after {
+  content: "X";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.menu__checkbox:focus-visible + .menu__checkbox-box {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   FLOATING COWBOYS VIDEO
+   ========================================================= */
+.floating-video {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 900;
+  width: 220px;
+  padding: 4px;
+  background-color: #000;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 14px rgba(0, 0, 0, 0.6);
+}
+
+.floating-video[hidden] {
+  display: none;
+}
+
+.floating-video__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 4px 6px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--fg-dim);
+}
+
+.floating-video__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #a33333;
+  display: inline-block;
+  animation: recBlink 1.4s infinite;
+}
+
+@keyframes recBlink {
+  50% { opacity: 0.15; }
+}
+
+.floating-video__el {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   BASIC VIEWPORT COMPATIBILITY
+   ========================================================= */
+@media (max-width: 600px) {
+  .screen--professional {
+    padding: 72px 24px 96px;
+  }
+
+  .logo {
+    margin-left: 24px;
+  }
+
+  .menu-toggle {
+    top: 12px;
+    right: 12px;
+  }
+
+  .options-menu {
+    top: 54px;
+    right: 12px;
+    width: 160px;
+  }
+
+  .floating-video {
+    width: 150px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .lightbox__close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .doc-header {
+    gap: 16px;
+  }
+
+  .pfp,
+  .signal-gif {
+    width: 76px;
+    height: 76px;
+  }
+}
