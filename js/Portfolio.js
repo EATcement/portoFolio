@@ -129,7 +129,7 @@ if (cowboysVideoEl) {
      ======================================================= */
 
   var PROXIMITY_SOUND_SRC = "assets/sounds/Omago.mp3";
-  var PROXIMITY_MAX_VOLUME = 0.3;
+  var PROXIMITY_MAX_VOLUME = 0.5;
   var PROXIMITY_RANGE_MULTIPLIER = 2; // ~1.5 viewport heights either side
 
   var proximityGif = document.getElementById("proximityGif");
