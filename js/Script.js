@@ -203,7 +203,7 @@
 
     portfolioNotificationContent.innerHTML = `
       <p class="portfolio-notification__message">
-        Você está gostando do portfólio?
+        Você está gostando do portfólio? (Turn sound ON!)
 
 
       </p>
@@ -214,7 +214,7 @@
           class="portfolio-notification__button portfolio-notification__button--no"
           id="portfolioNotificationNo"
         >
-          Não, poderia ser mais criativo.
+          Não, poderia ser mais criativo. 
         </button>
 
         <button
